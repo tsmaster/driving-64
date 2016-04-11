@@ -1,0 +1,563 @@
+<City>
+  <Rects>
+    <BdgRect Left="291" Right="441" Bottom="162" Top="308">
+      <RgbColor Red="255" Green="255" Blue="0"/>
+    </BdgRect>
+    <BdgRect Left="441" Right="451" Bottom="211" Top="256">
+      <RgbColor Red="255" Green="255" Blue="0"/>
+    </BdgRect>
+    <BdgRect Left="570" Right="698" Bottom="153" Top="321">
+      <RgbColor Red="0" Green="255" Blue="255"/>
+    </BdgRect>
+    <BdgRect Left="501" Right="759" Bottom="417" Top="491">
+      <RgbColor Red="0" Green="0" Blue="255"/>
+    </BdgRect>
+    <BdgRect Left="502" Right="630" Bottom="379" Top="417">
+      <RgbColor Red="0" Green="0" Blue="255"/>
+    </BdgRect>
+    <BdgRect Left="294" Right="440" Bottom="72" Top="157">
+      <RgbColor Red="0" Green="146" Blue="255"/>
+    </BdgRect>
+    <BdgRect Left="23" Right="153" Bottom="187" Top="290">
+      <RgbColor Red="255" Green="0" Blue="0"/>
+    </BdgRect>
+    <BdgRect Left="183" Right="279" Bottom="153" Top="276">
+      <RgbColor Red="255" Green="0" Blue="255"/>
+    </BdgRect>
+    <BdgRect Left="570" Right="778" Bottom="16" Top="86">
+      <RgbColor Red="146" Green="0" Blue="255"/>
+    </BdgRect>
+    <BdgRect Left="587" Right="778" Bottom="86" Top="141">
+      <RgbColor Red="146" Green="0" Blue="255"/>
+    </BdgRect>
+    <BdgRect Left="706" Right="778" Bottom="15" Top="16">
+      <RgbColor Red="146" Green="0" Blue="255"/>
+    </BdgRect>
+    <BdgRect Left="706" Right="778" Bottom="141" Top="261">
+      <RgbColor Red="146" Green="0" Blue="255"/>
+    </BdgRect>
+    <BdgRect Left="133" Right="370" Bottom="401" Top="489">
+      <RgbColor Red="128" Green="128" Blue="128"/>
+    </BdgRect>
+    <BdgRect Left="640" Right="781" Bottom="329" Top="400">
+      <RgbColor Red="0" Green="255" Blue="0"/>
+    </BdgRect>
+    <BdgRect Left="706" Right="781" Bottom="294" Top="329">
+      <RgbColor Red="0" Green="255" Blue="0"/>
+    </BdgRect>
+    <BdgRect Left="706" Right="781" Bottom="400" Top="403">
+      <RgbColor Red="0" Green="255" Blue="0"/>
+    </BdgRect>
+    <BdgRect Left="59" Right="165" Bottom="12" Top="177">
+      <RgbColor Red="255" Green="73" Blue="0"/>
+    </BdgRect>
+    <BdgRect Left="165" Right="205" Bottom="12" Top="125">
+      <RgbColor Red="255" Green="73" Blue="0"/>
+    </BdgRect>
+  </Rects>
+  <BspNodes>
+    <BspNode edge="(291, 162, 291, 308, (255, 255, 0))" Name="n0000">
+      <RgbColor Red="255" Green="255" Blue="0"/>
+      <Front>
+        <BspNode edge="(23, 187, 23, 290, (255, 0, 0))" Name="n0001">
+          <RgbColor Red="255" Green="0" Blue="0"/>
+          <Back>
+            <BspNode edge="(23, 290, 153, 290, (255, 0, 0))" Name="n0002">
+              <RgbColor Red="255" Green="0" Blue="0"/>
+              <Front>
+                <BspNode edge="(133, 401, 133, 489, (128, 128, 128))" Name="n0003">
+                  <RgbColor Red="128" Green="128" Blue="128"/>
+                  <Back>
+                    <BspNode edge="(133, 489, 291.0, 489.0, (128, 128, 128))" Name="n0004">
+                      <RgbColor Red="128" Green="128" Blue="128"/>
+                      <Back>
+                        <BspNode edge="(291.0, 401.0, 133, 401, (128, 128, 128))" Name="n0005">
+                          <RgbColor Red="128" Green="128" Blue="128"/>
+                        </BspNode>
+                      </Back>
+                    </BspNode>
+                  </Back>
+                </BspNode>
+              </Front>
+              <Back>
+                <BspNode edge="(153, 290, 153, 187, (255, 0, 0))" Name="n0006">
+                  <RgbColor Red="255" Green="0" Blue="0"/>
+                  <Front>
+                    <BspNode edge="(183, 153, 183, 276, (255, 0, 255))" Name="n0007">
+                      <RgbColor Red="255" Green="0" Blue="255"/>
+                      <Front>
+                        <BspNode edge="(153.0, 177.0, 165, 177, (255, 73, 0))" Name="n0008">
+                          <RgbColor Red="255" Green="73" Blue="0"/>
+                          <Back>
+                            <BspNode edge="(165, 177, 165, 12, (255, 73, 0))" Name="n0009">
+                              <RgbColor Red="255" Green="73" Blue="0"/>
+                              <Front>
+                                <BspNode edge="(165, 12, 165, 125, (255, 73, 0))" Name="n0010">
+                                  <RgbColor Red="255" Green="73" Blue="0"/>
+                                  <Back>
+                                    <BspNode edge="(165, 125, 183.0, 125.0, (255, 73, 0))" Name="n0011">
+                                      <RgbColor Red="255" Green="73" Blue="0"/>
+                                      <Back>
+                                        <BspNode edge="(183.0, 12.0, 165, 12, (255, 73, 0))" Name="n0012">
+                                          <RgbColor Red="255" Green="73" Blue="0"/>
+                                        </BspNode>
+                                      </Back>
+                                    </BspNode>
+                                  </Back>
+                                </BspNode>
+                              </Front>
+                              <Back>
+                                <BspNode edge="(165, 12, 153.0, 12.0, (255, 73, 0))" Name="n0013">
+                                  <RgbColor Red="255" Green="73" Blue="0"/>
+                                </BspNode>
+                              </Back>
+                            </BspNode>
+                          </Back>
+                        </BspNode>
+                      </Front>
+                      <Back>
+                        <BspNode edge="(183, 276, 279, 276, (255, 0, 255))" Name="n0014">
+                          <RgbColor Red="255" Green="0" Blue="255"/>
+                          <Back>
+                            <BspNode edge="(279, 276, 279, 153, (255, 0, 255))" Name="n0015">
+                              <RgbColor Red="255" Green="0" Blue="255"/>
+                              <Back>
+                                <BspNode edge="(279, 153, 183, 153, (255, 0, 255))" Name="n0016">
+                                  <RgbColor Red="255" Green="0" Blue="255"/>
+                                  <Front>
+                                    <BspNode edge="(183.0, 125.0, 205, 125, (255, 73, 0))" Name="n0017">
+                                      <RgbColor Red="255" Green="73" Blue="0"/>
+                                      <Back>
+                                        <BspNode edge="(205, 125, 205, 12, (255, 73, 0))" Name="n0018">
+                                          <RgbColor Red="255" Green="73" Blue="0"/>
+                                          <Back>
+                                            <BspNode edge="(205, 12, 183.0, 12.0, (255, 73, 0))" Name="n0019">
+                                              <RgbColor Red="255" Green="73" Blue="0"/>
+                                            </BspNode>
+                                          </Back>
+                                        </BspNode>
+                                      </Back>
+                                    </BspNode>
+                                  </Front>
+                                </BspNode>
+                              </Back>
+                            </BspNode>
+                          </Back>
+                        </BspNode>
+                      </Back>
+                    </BspNode>
+                  </Front>
+                  <Back>
+                    <BspNode edge="(153, 187, 23, 187, (255, 0, 0))" Name="n0020">
+                      <RgbColor Red="255" Green="0" Blue="0"/>
+                      <Front>
+                        <BspNode edge="(59, 12, 59, 177, (255, 73, 0))" Name="n0021">
+                          <RgbColor Red="255" Green="73" Blue="0"/>
+                          <Back>
+                            <BspNode edge="(59, 177, 153.0, 177.0, (255, 73, 0))" Name="n0022">
+                              <RgbColor Red="255" Green="73" Blue="0"/>
+                              <Back>
+                                <BspNode edge="(153.0, 12.0, 59, 12, (255, 73, 0))" Name="n0023">
+                                  <RgbColor Red="255" Green="73" Blue="0"/>
+                                </BspNode>
+                              </Back>
+                            </BspNode>
+                          </Back>
+                        </BspNode>
+                      </Front>
+                    </BspNode>
+                  </Back>
+                </BspNode>
+              </Back>
+            </BspNode>
+          </Back>
+        </BspNode>
+      </Front>
+      <Back>
+        <BspNode edge="(291, 308, 441, 308, (255, 255, 0))" Name="n0024">
+          <RgbColor Red="255" Green="255" Blue="0"/>
+          <Front>
+            <BspNode edge="(570.0, 308.0, 570, 321, (0, 255, 255))" Name="n0025">
+              <RgbColor Red="0" Green="255" Blue="255"/>
+              <Front>
+                <BspNode edge="(501, 417, 501, 491, (0, 0, 255))" Name="n0026">
+                  <RgbColor Red="0" Green="0" Blue="255"/>
+                  <Front>
+                    <BspNode edge="(291.0, 489.0, 370, 489, (128, 128, 128))" Name="n0027">
+                      <RgbColor Red="128" Green="128" Blue="128"/>
+                      <Back>
+                        <BspNode edge="(370, 489, 370, 401, (128, 128, 128))" Name="n0028">
+                          <RgbColor Red="128" Green="128" Blue="128"/>
+                          <Back>
+                            <BspNode edge="(370, 401, 291.0, 401.0, (128, 128, 128))" Name="n0029">
+                              <RgbColor Red="128" Green="128" Blue="128"/>
+                            </BspNode>
+                          </Back>
+                        </BspNode>
+                      </Back>
+                    </BspNode>
+                  </Front>
+                  <Back>
+                    <BspNode edge="(501, 491, 570.0, 491.0, (0, 0, 255))" Name="n0030">
+                      <RgbColor Red="0" Green="0" Blue="255"/>
+                      <Back>
+                        <BspNode edge="(570.0, 417.0, 501, 417, (0, 0, 255))" Name="n0031">
+                          <RgbColor Red="0" Green="0" Blue="255"/>
+                          <Front>
+                            <BspNode edge="(502, 379, 502, 417, (0, 0, 255))" Name="n0032">
+                              <RgbColor Red="0" Green="0" Blue="255"/>
+                              <Back>
+                                <BspNode edge="(502, 417, 570.0, 417.0, (0, 0, 255))" Name="n0033">
+                                  <RgbColor Red="0" Green="0" Blue="255"/>
+                                  <Back>
+                                    <BspNode edge="(570.0, 379.0, 502, 379, (0, 0, 255))" Name="n0034">
+                                      <RgbColor Red="0" Green="0" Blue="255"/>
+                                    </BspNode>
+                                  </Back>
+                                </BspNode>
+                              </Back>
+                            </BspNode>
+                          </Front>
+                        </BspNode>
+                      </Back>
+                    </BspNode>
+                  </Back>
+                </BspNode>
+              </Front>
+              <Back>
+                <BspNode edge="(570, 321, 698, 321, (0, 255, 255))" Name="n0035">
+                  <RgbColor Red="0" Green="255" Blue="255"/>
+                  <Front>
+                    <BspNode edge="(570.0, 491.0, 759, 491, (0, 0, 255))" Name="n0036">
+                      <RgbColor Red="0" Green="0" Blue="255"/>
+                      <Back>
+                        <BspNode edge="(759, 491, 759, 417, (0, 0, 255))" Name="n0037">
+                          <RgbColor Red="0" Green="0" Blue="255"/>
+                          <Front>
+                            <BspNode edge="(759.0, 400.0, 781, 400, (0, 255, 0))" Name="n0038">
+                              <RgbColor Red="0" Green="255" Blue="0"/>
+                              <Front>
+                                <BspNode edge="(759.0, 403.0, 781, 403, (0, 255, 0))" Name="n0039">
+                                  <RgbColor Red="0" Green="255" Blue="0"/>
+                                  <Back>
+                                    <BspNode edge="(781, 403, 781, 400, (0, 255, 0))" Name="n0040">
+                                      <RgbColor Red="0" Green="255" Blue="0"/>
+                                      <Back>
+                                        <BspNode edge="(781, 400, 759.0, 400.0, (0, 255, 0))" Name="n0041">
+                                          <RgbColor Red="0" Green="255" Blue="0"/>
+                                        </BspNode>
+                                      </Back>
+                                    </BspNode>
+                                  </Back>
+                                </BspNode>
+                              </Front>
+                              <Back>
+                                <BspNode edge="(781, 400, 781, 329, (0, 255, 0))" Name="n0042">
+                                  <RgbColor Red="0" Green="255" Blue="0"/>
+                                  <Front>
+                                    <BspNode edge="(781, 329, 781.0, 321.0, (0, 255, 0))" Name="n0043">
+                                      <RgbColor Red="0" Green="255" Blue="0"/>
+                                    </BspNode>
+                                  </Front>
+                                  <Back>
+                                    <BspNode edge="(781, 329, 759.0, 329.0, (0, 255, 0))" Name="n0044">
+                                      <RgbColor Red="0" Green="255" Blue="0"/>
+                                      <Front>
+                                        <BspNode edge="(759.0, 329.0, 781, 329, (0, 255, 0))" Name="n0045">
+                                          <RgbColor Red="0" Green="255" Blue="0"/>
+                                        </BspNode>
+                                      </Front>
+                                    </BspNode>
+                                  </Back>
+                                </BspNode>
+                              </Back>
+                            </BspNode>
+                          </Front>
+                          <Back>
+                            <BspNode edge="(759, 417, 570.0, 417.0, (0, 0, 255))" Name="n0046">
+                              <RgbColor Red="0" Green="0" Blue="255"/>
+                              <Front>
+                                <BspNode edge="(570.0, 417.0, 630, 417, (0, 0, 255))" Name="n0047">
+                                  <RgbColor Red="0" Green="0" Blue="255"/>
+                                  <Back>
+                                    <BspNode edge="(630, 417, 630, 379, (0, 0, 255))" Name="n0048">
+                                      <RgbColor Red="0" Green="0" Blue="255"/>
+                                      <Front>
+                                        <BspNode edge="(640, 329, 640, 400, (0, 255, 0))" Name="n0049">
+                                          <RgbColor Red="0" Green="255" Blue="0"/>
+                                          <Back>
+                                            <BspNode edge="(640, 400, 759.0, 400.0, (0, 255, 0))" Name="n0050">
+                                              <RgbColor Red="0" Green="255" Blue="0"/>
+                                              <Front>
+                                                <BspNode edge="(706, 400, 706, 403, (0, 255, 0))" Name="n0051">
+                                                  <RgbColor Red="0" Green="255" Blue="0"/>
+                                                  <Back>
+                                                    <BspNode edge="(706, 403, 759.0, 403.0, (0, 255, 0))" Name="n0052">
+                                                      <RgbColor Red="0" Green="255" Blue="0"/>
+                                                      <Back>
+                                                        <BspNode edge="(759.0, 400.0, 706, 400, (0, 255, 0))" Name="n0053">
+                                                          <RgbColor Red="0" Green="255" Blue="0"/>
+                                                        </BspNode>
+                                                      </Back>
+                                                    </BspNode>
+                                                  </Back>
+                                                </BspNode>
+                                              </Front>
+                                              <Back>
+                                                <BspNode edge="(759.0, 329.0, 640, 329, (0, 255, 0))" Name="n0054">
+                                                  <RgbColor Red="0" Green="255" Blue="0"/>
+                                                  <Front>
+                                                    <BspNode edge="(706.0, 321.0, 706, 329, (0, 255, 0))" Name="n0055">
+                                                      <RgbColor Red="0" Green="255" Blue="0"/>
+                                                      <Back>
+                                                        <BspNode edge="(706, 329, 759.0, 329.0, (0, 255, 0))" Name="n0056">
+                                                          <RgbColor Red="0" Green="255" Blue="0"/>
+                                                        </BspNode>
+                                                      </Back>
+                                                    </BspNode>
+                                                  </Front>
+                                                </BspNode>
+                                              </Back>
+                                            </BspNode>
+                                          </Back>
+                                        </BspNode>
+                                      </Front>
+                                      <Back>
+                                        <BspNode edge="(630, 379, 570.0, 379.0, (0, 0, 255))" Name="n0057">
+                                          <RgbColor Red="0" Green="0" Blue="255"/>
+                                        </BspNode>
+                                      </Back>
+                                    </BspNode>
+                                  </Back>
+                                </BspNode>
+                              </Front>
+                            </BspNode>
+                          </Back>
+                        </BspNode>
+                      </Back>
+                    </BspNode>
+                  </Front>
+                  <Back>
+                    <BspNode edge="(698, 321, 698.0, 308.0, (0, 255, 255))" Name="n0058">
+                      <RgbColor Red="0" Green="255" Blue="255"/>
+                      <Front>
+                        <BspNode edge="(706.0, 308.0, 706.0, 321.0, (0, 255, 0))" Name="n0059">
+                          <RgbColor Red="0" Green="255" Blue="0"/>
+                          <Back>
+                            <BspNode edge="(781.0, 321.0, 781.0, 308.0, (0, 255, 0))" Name="n0060">
+                              <RgbColor Red="0" Green="255" Blue="0"/>
+                            </BspNode>
+                          </Back>
+                        </BspNode>
+                      </Front>
+                    </BspNode>
+                  </Back>
+                </BspNode>
+              </Back>
+            </BspNode>
+          </Front>
+          <Back>
+            <BspNode edge="(441, 308, 441, 162, (255, 255, 0))" Name="n0061">
+              <RgbColor Red="255" Green="255" Blue="0"/>
+              <Front>
+                <BspNode edge="(441, 211, 441, 256, (255, 255, 0))" Name="n0062">
+                  <RgbColor Red="255" Green="255" Blue="0"/>
+                  <Back>
+                    <BspNode edge="(441, 256, 451, 256, (255, 255, 0))" Name="n0063">
+                      <RgbColor Red="255" Green="255" Blue="0"/>
+                      <Front>
+                        <BspNode edge="(570.0, 256.0, 570.0, 308.0, (0, 255, 255))" Name="n0064">
+                          <RgbColor Red="0" Green="255" Blue="255"/>
+                          <Back>
+                            <BspNode edge="(698.0, 308.0, 698.0, 256.0, (0, 255, 255))" Name="n0065">
+                              <RgbColor Red="0" Green="255" Blue="255"/>
+                              <Front>
+                                <BspNode edge="(706.0, 256.0, 706, 261, (146, 0, 255))" Name="n0066">
+                                  <RgbColor Red="146" Green="0" Blue="255"/>
+                                  <Front>
+                                    <BspNode edge="(706, 294, 706.0, 308.0, (0, 255, 0))" Name="n0067">
+                                      <RgbColor Red="0" Green="255" Blue="0"/>
+                                    </BspNode>
+                                  </Front>
+                                  <Back>
+                                    <BspNode edge="(706, 261, 778, 261, (146, 0, 255))" Name="n0068">
+                                      <RgbColor Red="146" Green="0" Blue="255"/>
+                                      <Front>
+                                        <BspNode edge="(781.0, 308.0, 781, 294, (0, 255, 0))" Name="n0069">
+                                          <RgbColor Red="0" Green="255" Blue="0"/>
+                                          <Back>
+                                            <BspNode edge="(781, 294, 706, 294, (0, 255, 0))" Name="n0070">
+                                              <RgbColor Red="0" Green="255" Blue="0"/>
+                                            </BspNode>
+                                          </Back>
+                                        </BspNode>
+                                      </Front>
+                                      <Back>
+                                        <BspNode edge="(778, 261, 778.0, 256.0, (146, 0, 255))" Name="n0071">
+                                          <RgbColor Red="146" Green="0" Blue="255"/>
+                                        </BspNode>
+                                      </Back>
+                                    </BspNode>
+                                  </Back>
+                                </BspNode>
+                              </Front>
+                            </BspNode>
+                          </Back>
+                        </BspNode>
+                      </Front>
+                      <Back>
+                        <BspNode edge="(451, 256, 451, 211, (255, 255, 0))" Name="n0072">
+                          <RgbColor Red="255" Green="255" Blue="0"/>
+                          <Front>
+                            <BspNode edge="(570, 153, 570.0, 256.0, (0, 255, 255))" Name="n0073">
+                              <RgbColor Red="0" Green="255" Blue="255"/>
+                              <Front>
+                                <BspNode edge="(570, 16, 570, 86, (146, 0, 255))" Name="n0074">
+                                  <RgbColor Red="146" Green="0" Blue="255"/>
+                                </BspNode>
+                              </Front>
+                              <Back>
+                                <BspNode edge="(698.0, 256.0, 698, 153, (0, 255, 255))" Name="n0075">
+                                  <RgbColor Red="0" Green="255" Blue="255"/>
+                                  <Front>
+                                    <BspNode edge="(698.0, 86.0, 778, 86, (146, 0, 255))" Name="n0076">
+                                      <RgbColor Red="146" Green="0" Blue="255"/>
+                                      <Front>
+                                        <BspNode edge="(698.0, 141.0, 778, 141, (146, 0, 255))" Name="n0077">
+                                          <RgbColor Red="146" Green="0" Blue="255"/>
+                                          <Front>
+                                            <BspNode edge="(706, 141, 706.0, 256.0, (146, 0, 255))" Name="n0078">
+                                              <RgbColor Red="146" Green="0" Blue="255"/>
+                                              <Back>
+                                                <BspNode edge="(778.0, 256.0, 778, 141, (146, 0, 255))" Name="n0079">
+                                                  <RgbColor Red="146" Green="0" Blue="255"/>
+                                                  <Back>
+                                                    <BspNode edge="(778, 141, 706, 141, (146, 0, 255))" Name="n0080">
+                                                      <RgbColor Red="146" Green="0" Blue="255"/>
+                                                    </BspNode>
+                                                  </Back>
+                                                </BspNode>
+                                              </Back>
+                                            </BspNode>
+                                          </Front>
+                                          <Back>
+                                            <BspNode edge="(778, 141, 778, 86, (146, 0, 255))" Name="n0081">
+                                              <RgbColor Red="146" Green="0" Blue="255"/>
+                                              <Back>
+                                                <BspNode edge="(778, 86, 698.0, 86.0, (146, 0, 255))" Name="n0082">
+                                                  <RgbColor Red="146" Green="0" Blue="255"/>
+                                                </BspNode>
+                                              </Back>
+                                            </BspNode>
+                                          </Back>
+                                        </BspNode>
+                                      </Front>
+                                      <Back>
+                                        <BspNode edge="(778, 86, 778, 16, (146, 0, 255))" Name="n0083">
+                                          <RgbColor Red="146" Green="0" Blue="255"/>
+                                          <Front>
+                                            <BspNode edge="(778, 16, 778, 15, (146, 0, 255))" Name="n0084">
+                                              <RgbColor Red="146" Green="0" Blue="255"/>
+                                            </BspNode>
+                                          </Front>
+                                          <Back>
+                                            <BspNode edge="(778, 16, 698.0, 16.0, (146, 0, 255))" Name="n0085">
+                                              <RgbColor Red="146" Green="0" Blue="255"/>
+                                              <Front>
+                                                <BspNode edge="(706, 15, 706, 16, (146, 0, 255))" Name="n0086">
+                                                  <RgbColor Red="146" Green="0" Blue="255"/>
+                                                  <Back>
+                                                    <BspNode edge="(706, 16, 778, 16, (146, 0, 255))" Name="n0087">
+                                                      <RgbColor Red="146" Green="0" Blue="255"/>
+                                                      <Back>
+                                                        <BspNode edge="(778, 15, 706, 15, (146, 0, 255))" Name="n0088">
+                                                          <RgbColor Red="146" Green="0" Blue="255"/>
+                                                        </BspNode>
+                                                      </Back>
+                                                    </BspNode>
+                                                  </Back>
+                                                </BspNode>
+                                              </Front>
+                                            </BspNode>
+                                          </Back>
+                                        </BspNode>
+                                      </Back>
+                                    </BspNode>
+                                  </Front>
+                                  <Back>
+                                    <BspNode edge="(698, 153, 570, 153, (0, 255, 255))" Name="n0089">
+                                      <RgbColor Red="0" Green="255" Blue="255"/>
+                                      <Front>
+                                        <BspNode edge="(570, 86, 698.0, 86.0, (146, 0, 255))" Name="n0090">
+                                          <RgbColor Red="146" Green="0" Blue="255"/>
+                                          <Front>
+                                            <BspNode edge="(587, 86, 587, 141, (146, 0, 255))" Name="n0091">
+                                              <RgbColor Red="146" Green="0" Blue="255"/>
+                                              <Back>
+                                                <BspNode edge="(587, 141, 698.0, 141.0, (146, 0, 255))" Name="n0092">
+                                                  <RgbColor Red="146" Green="0" Blue="255"/>
+                                                  <Back>
+                                                    <BspNode edge="(698.0, 86.0, 587, 86, (146, 0, 255))" Name="n0093">
+                                                      <RgbColor Red="146" Green="0" Blue="255"/>
+                                                    </BspNode>
+                                                  </Back>
+                                                </BspNode>
+                                              </Back>
+                                            </BspNode>
+                                          </Front>
+                                          <Back>
+                                            <BspNode edge="(698.0, 16.0, 570, 16, (146, 0, 255))" Name="n0094">
+                                              <RgbColor Red="146" Green="0" Blue="255"/>
+                                            </BspNode>
+                                          </Back>
+                                        </BspNode>
+                                      </Front>
+                                    </BspNode>
+                                  </Back>
+                                </BspNode>
+                              </Back>
+                            </BspNode>
+                          </Front>
+                          <Back>
+                            <BspNode edge="(451, 211, 441, 211, (255, 255, 0))" Name="n0095">
+                              <RgbColor Red="255" Green="255" Blue="0"/>
+                            </BspNode>
+                          </Back>
+                        </BspNode>
+                      </Back>
+                    </BspNode>
+                  </Back>
+                </BspNode>
+              </Front>
+              <Back>
+                <BspNode edge="(441, 162, 291, 162, (255, 255, 0))" Name="n0096">
+                  <RgbColor Red="255" Green="255" Blue="0"/>
+                  <Front>
+                    <BspNode edge="(294, 72, 294, 157, (0, 146, 255))" Name="n0097">
+                      <RgbColor Red="0" Green="146" Blue="255"/>
+                      <Back>
+                        <BspNode edge="(294, 157, 440, 157, (0, 146, 255))" Name="n0098">
+                          <RgbColor Red="0" Green="146" Blue="255"/>
+                          <Back>
+                            <BspNode edge="(440, 157, 440, 72, (0, 146, 255))" Name="n0099">
+                              <RgbColor Red="0" Green="146" Blue="255"/>
+                              <Back>
+                                <BspNode edge="(440, 72, 294, 72, (0, 146, 255))" Name="n0100">
+                                  <RgbColor Red="0" Green="146" Blue="255"/>
+                                </BspNode>
+                              </Back>
+                            </BspNode>
+                          </Back>
+                        </BspNode>
+                      </Back>
+                    </BspNode>
+                  </Front>
+                </BspNode>
+              </Back>
+            </BspNode>
+          </Back>
+        </BspNode>
+      </Back>
+    </BspNode>
+  </BspNodes>
+</City>
