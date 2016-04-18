@@ -45,10 +45,10 @@ public class RoadManager : Singleton<RoadManager> {
     
     public void Start()
     {
-        //highwayMode = new HighwayMode();
-        //highwayMode.Start();
+        highwayMode = new HighwayMode();
+        highwayMode.Start();
 
-        SetCityModeIn(City.Boston);
+        //SetCityModeIn(City.Boston);
     }
     
     private void SetMode(GameMode mode)

@@ -8,11 +8,17 @@ public class RoadRenderer : MonoBehaviour {
     
     public Texture2D[] cars;
 
-    public Texture2D background;
+    public Texture2D[] backgrounds;
+
+    public Texture2D title;
+    public Texture2D winner;
+    public Texture2D[] trees;
+
+    public Texture2D target;
     
     Color32[] frameBuffer;
     
-    Color32[] palette;
+    public Color32[] palette;
     Color32[] fontPixels;
     
     RoadManager roadManager;
@@ -70,7 +76,7 @@ public class RoadRenderer : MonoBehaviour {
         return -1;
     }
     
-    void drawString(string s, int x, int y, int paletteIndex)
+    public void drawString(string s, int x, int y, int paletteIndex)
     {
         for (int i = 0; i < s.Length; ++i)
         {
@@ -145,6 +151,15 @@ public class RoadRenderer : MonoBehaviour {
         }
     }
 
+    public void Hlin32(int left, int right, int at, Color32 color)
+    {
+        for (int x = left; x <= right; ++x)
+        {
+            setPixel(x, at, color);
+        }
+    }
+    
+
     public void Vlin(int bottom, int top, int at, int paletteIndex)
     {
         for (int y = bottom; y <= top; ++y)
@@ -152,6 +167,15 @@ public class RoadRenderer : MonoBehaviour {
             setPixel(at, y, palette[paletteIndex]);
         }
     }
+
+    public void VlinRGB(int bottom, int top, int at, int red, int green, int blue)
+    {
+        Color32 c = new Color32((byte)red, (byte)green, (byte)blue, 255);
+        for (int y = bottom; y <= top; ++y)
+        {
+            setPixel(at, y, c);
+        }
+    }    
     
     public void ClearScreen(int paletteIndex)
     {
@@ -168,18 +192,18 @@ public class RoadRenderer : MonoBehaviour {
         palette = new Color32[16];
         
         palette[0] = new Color32(0, 0, 0, 255);
-        palette[1] = new Color32(227,  30,  96, 255);
-        palette[2] = new Color32( 96,  78, 189, 255);
-        palette[3] = new Color32(255,  68, 253, 255);
+        palette[1] = new Color32(227,  30,  96, 255); // brick red
+        palette[2] = new Color32( 96,  78, 189, 255); // purple
+        palette[3] = new Color32(255,  68, 253, 255); 
         palette[4] = new Color32(  0, 163,  96, 255);
-        palette[5] = new Color32(128, 128, 128, 255);
+        palette[5] = new Color32(128, 128, 128, 255); // med gray
         palette[6] = new Color32( 20, 207, 253, 255);
-        palette[7] = new Color32(208, 195, 255, 255);
+        palette[7] = new Color32(208, 195, 255, 255); // lavender
         palette[8] = new Color32( 96, 114,   3, 255);
-        palette[9] = new Color32(255, 106,  60, 255);
-        palette[10] = new Color32(156, 156, 156, 255);
-        palette[11] = new Color32(255, 160, 208, 255);
-        palette[12] = new Color32( 20, 245,  60, 255);
+        palette[9] = new Color32(255, 106,  60, 255); // orange
+        palette[10] = new Color32(156, 156, 156, 255); // lighter gray
+        palette[11] = new Color32(255, 160, 208, 255); // pink
+        palette[12] = new Color32( 20, 245,  60, 255); // aqua
         palette[13] = new Color32(208, 221, 141, 255);
         palette[14] = new Color32(114, 255, 208, 255);
         palette[15] = new Color32(255, 255, 255, 255);
@@ -221,19 +245,32 @@ public class RoadRenderer : MonoBehaviour {
         }
     }
     
-    public void drawSprite(Texture2D tex, int x, int y)
+    public void drawSprite(Texture2D tex, int x, int y, bool centerX, bool centerY)
     {
         int width = tex.width;
         int height = tex.height;
-        Color32[] carPixels = tex.GetPixels32();
+        int offsetX = centerX ? tex.width / 2 : 0;
+        int offsetY = centerY ? tex.height / 2 : 0;
+        Color32[] texPixels = tex.GetPixels32();
         for (int i= 0; i < width; ++i)
         {
+            int destX = x - offsetX + i;
+            if (destX < 0 || destX > 63)
+            {
+                continue;
+            }
             for (int j=0; j < height; ++j)
             {
-                Color32 px = carPixels[width*j + i];
+                int destY = y - offsetY + j;
+                if (destY < 0 || destY > 63)
+                {
+                    continue;
+                }
+                
+                Color32 px = texPixels[width * j + i];
                 if (px.a > 127)
                 {
-                    setPixel(x+i, y+j, px);
+                    setPixel(destX, destY, px);
                 }
             }
         }            
@@ -259,6 +296,41 @@ public class RoadRenderer : MonoBehaviour {
             }
         }            
     }
+
+    public void drawSpriteScaledAndClipped(Texture2D tex, int x, int y, float scale, int clipHeight, bool centerX, bool centerY)
+    {
+        int width = tex.width;
+        int height = tex.height;
+        int offsetX = centerX ? Mathf.FloorToInt(width * scale / 2) : 0;
+        int offsetY = centerY ? Mathf.FloorToInt(height * scale / 2) : 0;
+        Color32[] carPixels = tex.GetPixels32();
+        for (int j=0; j < height * scale; ++j)
+        {
+            int destY = y + j - offsetY;
+            if (destY < clipHeight || destY < 0 || destY >= 64)
+            {
+                continue;
+            }
+            int tj = (int)(j / scale);
+            
+            for (int i= 0; i < width * scale; ++i)
+            {
+                int destX = x + i - offsetX;
+                if (destX < 0 || destX >= 64)
+                {
+                    continue;
+                }
+                int ti = (int)(i / scale);
+                
+                Color32 px = carPixels[width*tj + ti];
+                if (px.a > 127)
+                {
+                    setPixel(destX, destY, px);
+                }
+            }
+        }            
+    }
+    
     
     /*
     void drawScalingBoxTest()
@@ -297,13 +369,13 @@ public class RoadRenderer : MonoBehaviour {
     void Update () {
         frameCount++;
 
-        if (frameCount < 50)
+        if (frameCount < 35)
         {
             drawOSLogo();
         }
         else
         {
-            float t = (frameCount-50) / (1024.0f-50);
+            //float t = (frameCount-50) / (1024.0f-50);
 
                 /*
             float c1pos = 100-100*t;
