@@ -4,7 +4,14 @@ import pydot
 from reportlab.pdfgen import canvas
 from reportlab.lib.pagesizes import letter
 
-from lxml import etree
+
+def MF(v):
+    v = str(v)
+    if '.' not in v:
+        v = v+'.0'
+    if 'f' not in v:
+        v = v + 'f'
+    return v
 
 
 nodeNames = []
@@ -206,13 +213,72 @@ def makePartition(edgeList, graph):
     
     return rootNode
 
-def makeColorSubElement(xmlNode, color):
-    colorElem = etree.SubElement(xmlNode, "RgbColor")
-    colorElem.set('Red', str(color[0]))
-    colorElem.set('Green', str(color[1]))
-    colorElem.set('Blue', str(color[2]))
+class CSharpWriter:
+    def __init__(self, writeFile):
+        self.file = writeFile
+        self.rects = []
+        self.rootNode = None
 
-def processFile(fn, graphOut, mapOut, xmlFilenameOut):
+    def addRect(self, rect, color):
+        self.rects.append((rect, color))
+
+    def addNode(self, node):
+        self.rootNode = node
+
+    def writeNode(self, node, indent):
+        if not node:
+            self.file.write(" "*indent + "null")
+            return
+        
+        frontName = "null"
+        backName = "null"
+
+        ex1,ey1, ex2, ey2, color = node.edge
+        edgeRepr = "{0}, {1}, {2}, {3}, {4}, {5}, {6}".format(
+            MF(ex1), MF(ey1), MF(ex2), MF(ey2),
+            color[0], color[1], color[2]
+        )
+
+        self.file.write(" " * indent + "new BDG_Node({0}, \"{1}\")".format(
+            edgeRepr, node.name))
+
+        if ((node.frontNode is not None) or (node.backNode is not None)):
+            self.file.write("\n"+ " " * indent + "{\n")
+            self.writeNode(node.frontNode, indent + 2)
+            self.file.write(",\n")
+            self.writeNode(node.backNode, indent + 2)
+            self.file.write("\n"+ " " * indent +"}")
+
+    def write(self):
+        print "writing C#"
+        self.file.write("""
+// Generated file, do not modify.
+
+using UnityEngine;
+using System.Collections;
+using System.Collections.Generic;
+
+class Boston : BDG_City
+{
+  public Boston() 
+  {
+    Rects = new List<BDG_Rect>();
+""")
+        
+        for r in self.rects:
+            rect, color = r
+            self.file.write("    Rects.Add(new BDG_Rect({0}, {1}, {2}, {3}, {4}, {5}, {6}));\n".format(MF(rect[0]), MF(rect[1]), MF(rect[2]), MF(rect[3]), color[0], color[1], color[2]))
+
+        self.file.write("\n")
+
+        self.file.write("    BSP_Root =\n")
+        self.writeNode(self.rootNode, 6)
+        self.file.write(";\n")
+
+        self.file.write("  }\n}\n\n")
+        self.file.close()
+
+def processFile(fn, graphOut, mapOut, cSharpFilenameOut):
     im = Image.open(fn)
     
     if graphOut:
@@ -222,12 +288,12 @@ def processFile(fn, graphOut, mapOut, xmlFilenameOut):
         
     pixelsByColor = {}
 
-    root = None
-    rectList = None
+    cSharpFile = None
+    cSharpWriter = None
     
-    if xmlFilenameOut:
-        root = etree.Element("City")
-        rectList = etree.SubElement(root, "Rects")
+    if cSharpFilenameOut:
+        cSharpFile = open(cSharpFilenameOut, "wt")
+        cSharpWriter = CSharpWriter(cSharpFile)
     
     for x in range(im.width):
         for y in range(im.height):
@@ -249,13 +315,8 @@ def processFile(fn, graphOut, mapOut, xmlFilenameOut):
             edgeList.append((x1,y2,x2,y2,color))
             edgeList.append((x2,y2,x2,y1,color))
             edgeList.append((x2,y1,x1,y1,color))
-            if root is not None:
-                rectElem = etree.SubElement(rectList, "BdgRect")
-                rectElem.set('Left', str(x1))
-                rectElem.set('Right', str(x2))
-                rectElem.set('Bottom', str(y1))
-                rectElem.set('Top', str(y2))
-                makeColorSubElement(rectElem, color)
+            if cSharpWriter is not None:
+                cSharpWriter.addRect(r, color)
 
     print edgeList
 
@@ -271,34 +332,11 @@ def processFile(fn, graphOut, mapOut, xmlFilenameOut):
         c.showPage()
         c.save()
 
-    if root is not None:
-        bspElem = etree.SubElement(root, "BspNodes")
-        addNodeToXML(bspElem, partition)
-        
-    if root is not None:
-        tree = etree.ElementTree(root)
-        prettyString = etree.tostring(tree, pretty_print=True)
-        with open(xmlFilenameOut, "wt") as f:
-            f.write(prettyString)
+    if cSharpWriter is not None:
+        cSharpWriter.addNode(partition)
+        cSharpWriter.write()
     
     return partition
-
-def addNodeToXML(xmlElement, node):
-    if node is None:
-        return
-
-    subElement=etree.SubElement(xmlElement, "BspNode")
-    subElement.set('edge', `node.edge`)
-    subElement.set('Name', node.name)
-    x1,x2,y1,y2, color = node.edge
-    makeColorSubElement(subElement, color)
-    
-    if node.frontNode is not None:
-        frontElement = etree.SubElement(subElement, "Front")
-        addNodeToXML(frontElement, node.frontNode)
-    if node.backNode is not None:
-        backElement = etree.SubElement(subElement, "Back")
-        addNodeToXML(backElement, node.backNode)
 
 def makeMap(rootNode, c):
     if not rootNode:
@@ -324,6 +362,6 @@ def makeMap(rootNode, c):
 #print processFile("autoduel-bos-exits.png", None, None)
 #print
 print "buildings"
-processFile("autoduel-bos-buildings.png", "building-bsp.pdf", "building-map.pdf", "bos-buildings.xml")
+processFile("autoduel-bos-buildings.png", "building-bsp.pdf", "building-map.pdf", "city-bos.cs")
 
         

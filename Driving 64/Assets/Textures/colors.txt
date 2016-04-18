@@ -1,0 +1,24 @@
+http://mrob.com/pub/xapple2/colors.html
+
+ black    COLOR=0    0   0    0      0   0   0
+ red      COLOR=1   90  60   25    227  30  96
+ dk blue  COLOR=2    0  60   25     96  78 189
+ purple   COLOR=3   45 100   50    255  68 253
+ dk green COLOR=4  270  60   25      0 163  96
+ gray     COLOR=5    0   0   50    156 156 156
+ med blue COLOR=6  315 100   50     20 207 253
+ lt blue  COLOR=7    0  60   75    208 195 255
+ brown    COLOR=8  180  60   25     96 114   3
+ orange   COLOR=9  135 100   50    255 106  60
+ grey     COLOR=10   0   0   50    156 156 156
+ pink     COLOR=11  90  60   75    255 160 208
+ lt green COLOR=12 225 100   50     20 245  60
+ yellow   COLOR=13 180  60   75    208 221 141
+ aqua     COLOR=14 270  60   75    114 255 208
+ white    COLOR=15   0   0  100    255 255 255
+
+
+ green    HCOLOR=1 225 100   50     20 245  60
+ purple   HCOLOR=2  45 100   50    255  68 253
+ orange   HCOLOR=5 135 100   50    255 106  60
+ blue     HCOLOR=6 315 100   50     20 207 253
